@@ -7,8 +7,9 @@ import os
 
 # Initialize model once
 model_id = "syvai/hviske-v2"
-device = "cuda" if torch.cuda.is_available() else "cpu"
-torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
+device = "cpu"
+torch_dtype = torch.float32
+
 
 model = AutoModelForSpeechSeq2Seq.from_pretrained(
     model_id,
